@@ -1,39 +1,24 @@
 ---
-import { info } from "@data";
-
-import Layout from "@layouts/Layout.astro";
-import Hero from "@components/home/Hero.astro";
-import Experience from "@components/home/Experience.astro";
-import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
-import MetaHead from "@components/general/MetaHead.astro";
-
-const featureProjects = info.projects.reduce((accumulator, project) => {
-  if (accumulator.length < 6 && project.isFeatured) {
-    accumulator.push(project);
-  }
-  return accumulator;
-}, []);
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <MetaHead
-      title={"Portfolio"}
-      description={info.about}
-      ogImageUrl={"/assets/images/profile.png"}
-    />
-  </head>
-
-  <body>
-    <Layout>
-      <Hero name={info.name} about={info.about} />
-      <Experience title={"EXPERIENCE"} details={info.experience} />
-      <Experience title={"EDUCATION"} details={info.education} />
-      <section>
-        <h2 class="w-[15rem] dark:text-light mt-16">FEATURE PROJECTS</h2>
-        <ProjectsWrapper projects={featureProjects} />
-      </section>
-    </Layout>
-  </body>
-</html>
+<Layout title="Joseph Lakata · Contranada Studios">
+  <section class="intro">
+    <h1>Joseph Lakata</h1>
+    <h2>Contranada Studios</h2>
+    <p class="tagline">Artist. Technologist. Trash Alchemist.</p>
+    
+    <p>
+      Contranada Studios explores the space between utility and myth — crafting systems from salvage, weaving story into software, and building strange tools for a world in transition.
+    </p>
+    
+    <p>
+      Through sculpture, tech, and fieldwork, I build new pathways from the discarded and overlooked. Every system I make, every object I reclaim, reflects a devotion to what remains when the noise fades.
+    </p>
+    
+    <div class="links">
+      <a href="mailto:josephlakata@gmail.com" target="_blank" rel="noopener">Email</a>
+      <a href="https://instagram.com/josephlakata" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+</Layout>
