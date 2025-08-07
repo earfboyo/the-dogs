@@ -2,23 +2,67 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Joseph Lakata · Contranada Studios">
-  <section class="intro">
-    <h1>Joseph Lakata</h1>
-    <h2>Contranada Studios</h2>
-    <p class="tagline">Artist. Technologist. Trash Alchemist.</p>
-    
-    <p>
-      Contranada Studios explores the space between utility and myth — crafting systems from salvage, weaving story into software, and building strange tools for a world in transition.
-    </p>
-    
-    <p>
-      Through sculpture, tech, and fieldwork, I build new pathways from the discarded and overlooked. Every system I make, every object I reclaim, reflects a devotion to what remains when the noise fades.
-    </p>
-    
-    <div class="links">
-      <a href="mailto:josephlakata@gmail.com" target="_blank" rel="noopener">Email</a>
-      <a href="https://instagram.com/josephlakata" target="_blank" rel="noopener">Instagram</a>
+<Layout title="Joseph Lakata · Contranada">
+  <main class="landing">
+    <div class="center">
+      <h1>Joseph Lakata</h1>
+      <h2>Contranada Studios</h2>
+      <p class="tagline">Artist. Technologist. Trash Alchemist.</p>
+      <p class="bio">
+        Building systems from salvage.  
+        Weaving ritual into utility.  
+        Shaping futures from what’s left behind.
+      </p>
+
+      <div class="links">
+        <a href="mailto:josephlakata@gmail.com">Email</a>
+        <a href="https://instagram.com/josephlakata" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
-  </section>
+  </main>
+
+  <style>
+    .landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    .center {
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      font-weight: normal;
+      color: #777;
+      margin-bottom: 1.2em;
+    }
+    .tagline {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-bottom: 1em;
+    }
+    .bio {
+      margin-bottom: 2em;
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #444;
+    }
+    .links a {
+      display: inline-block;
+      margin: 0 0.75rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #222;
+      border-bottom: 1px solid transparent;
+    }
+    .links a:hover {
+      border-bottom: 1px solid #222;
+    }
+  </style>
 </Layout>
