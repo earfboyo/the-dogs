@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Joseph Lakata · Contranada">
+<Layout title="Joseph Lakata · Contranada Studios" showHeader={false} showFooter={false}>
   <main class="landing">
     <div class="center">
-      <h1>Joseph Lakata</h1>
+      <img src="/assets/joseph-lakata.png" alt="Joseph Lakata" class="logo" />
       <h2>Contranada Studios</h2>
       <p class="tagline">Artist. Technologist. Trash Alchemist.</p>
       <p class="bio">
@@ -13,15 +13,21 @@ import Layout from '../layouts/Layout.astro';
         Weaving ritual into utility.  
         Shaping futures from what’s left behind.
       </p>
-
       <div class="links">
         <a href="mailto:josephlakata@gmail.com">Email</a>
-        <a href="https://instagram.com/josephlakata" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://instagram.com/_joe.la" target="_blank" rel="noopener">@_joe.la</a>
       </div>
     </div>
   </main>
 
   <style>
+    body {
+      background-color: #ffffff;
+      color: #111;
+      margin: 0;
+      font-family: system-ui, sans-serif;
+    }
+
     .landing {
       display: flex;
       align-items: center;
@@ -29,30 +35,39 @@ import Layout from '../layouts/Layout.astro';
       min-height: 100vh;
       text-align: center;
       padding: 2rem;
+      background: #fff;
     }
+
     .center {
       max-width: 600px;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      font-weight: normal;
-      color: #777;
-      margin-bottom: 1.2em;
-    }
-    .tagline {
-      font-style: italic;
-      font-size: 1.2rem;
+
+    .logo {
+      max-width: 400px;
+      width: 80%;
+      height: auto;
       margin-bottom: 1em;
     }
+
+    h2 {
+      font-weight: normal;
+      color: #666;
+      margin-bottom: 1em;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 1em;
+    }
+
     .bio {
       margin-bottom: 2em;
       line-height: 1.6;
       font-size: 1rem;
       color: #444;
     }
+
     .links a {
       display: inline-block;
       margin: 0 0.75rem;
@@ -61,6 +76,7 @@ import Layout from '../layouts/Layout.astro';
       color: #222;
       border-bottom: 1px solid transparent;
     }
+
     .links a:hover {
       border-bottom: 1px solid #222;
     }
