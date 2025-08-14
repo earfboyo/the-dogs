@@ -6,6 +6,12 @@ import Layout from '../layouts/Layout.astro';
   <main class="landing">
     <div class="center">
       <img src="/assets/joseph-lakata.png" alt="Joseph Lakata" class="logo" />
+      <h2 class="subtitle">Contranada Studios</h2>
+
+      <div class="links">
+        <a href="mailto:josephlakata@gmail.com">Email</a>
+        <a href="https://instagram.com/_joe.la" target="_blank" rel="noopener">@_joe.la</a>
+      </div>
     </div>
   </main>
 
@@ -13,21 +19,66 @@ import Layout from '../layouts/Layout.astro';
     body {
       background-color: #fff;
       margin: 0;
+      font-family: system-ui, sans-serif;
+      color: #111;
     }
+
     .landing {
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background: #fff;
-    }
-    .center {
       text-align: center;
     }
+
+    .center {
+      max-width: 600px;
+      padding: 2rem;
+    }
+
     .logo {
       max-width: 100%;
       width: 80%;
       height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      font-weight: normal;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeIn 2s ease 0.5s forwards;
+    }
+
+    .links {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .landing:hover .links,
+    .landing:focus-within .links {
+      opacity: 1;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      border-bottom: 1px solid transparent;
+    }
+
+    .links a:hover {
+      border-bottom: 1px solid #222;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </Layout>
