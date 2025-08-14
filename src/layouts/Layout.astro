@@ -1,22 +1,23 @@
 ---
-export interface Props {
-  title: string;
-  showHeader?: boolean;
-  showFooter?: boolean;
-}
-const { title, showHeader = true, showFooter = true } = Astro.props;
+import Footer from "@components/general/Footer.astro";
+import Navbar from "@components/general/Navbar.astro";
+import "../styles/style.css";
 ---
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <title>Joseph Lakata</title>
+
+    <!-- Add this font link 👇 -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+
   </head>
   <body>
-    {showHeader ? <header></header> : null}
-    <slot />
-    {showFooter ? <footer></footer> : null} <!-- DELETE THIS if not needed -->
+    <Navbar />
+    <main class="container">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
